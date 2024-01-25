@@ -1,0 +1,38 @@
+<?php
+
+$helperData = $this->helper(Swirth\ScrollToTop\Helper\Data::class);
+?>
+
+<?php
+
+if ($helperData->isModuleEnabled()) {
+    ?>
+    <button
+        id="btn-scroll-to-top" style="display: none;" class="<?= $helperData->getPosition(); ?> <?= $helperData->getStyle(); ?>">
+        <img
+            src="<?= $this->getViewFileUrl('Swirth_ScrollToTop::images/scroll-to-top-logo.svg'); ?>"
+            alt="<?= __("ScrollToTop Button"); ?>">
+    </button>
+    <script>
+        require([
+            'jquery'
+        ], function ($) {
+            let toTopBtn = $("#btn-scroll-to-top");
+            toTopBtn.on("click", function () {
+                $('html').animate({scrollTop: 0}, 1000);
+            })
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 0) {
+                        toTopBtn.show();
+                    } else {
+                        toTopBtn.hide();
+                    }
+                })
+            })
+
+        })
+    </script>
+    <?php
+}
+?>
