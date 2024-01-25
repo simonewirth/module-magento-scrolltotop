@@ -1,0 +1,16 @@
+{
+    "name": "swirth/module-scrolltotop",
+    "description": "M\u00f3dulo ScrollToTop em Magento2",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Swirth\\ScrollToTop\\": ""
+        }
+    }
+}
