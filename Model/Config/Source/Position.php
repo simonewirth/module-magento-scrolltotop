@@ -1,8 +1,4 @@
 <?php
-/**
- * Copyright ©  All rights reserved.
- * See COPYING.txt for license details.
- */
 declare(strict_types=1);
 
 namespace Swirth\ScrollToTop\Model\Config\Source;
@@ -10,14 +6,25 @@ namespace Swirth\ScrollToTop\Model\Config\Source;
 class Position implements \Magento\Framework\Option\ArrayInterface
 {
 
-    public function toOptionArray()
+    public function toOptionArray(): array
     {
-        return [['value' => 'left', 'label' => __('left')],['value' => 'right', 'label' => __('right')]];
+        return [
+            [
+                'value' => 'left',
+                'label' => __('left')
+            ],
+            [
+                'value' => 'right',
+                'label' => __('right')
+            ]
+        ];
     }
 
-    public function toArray()
+    public function toArray(): array
     {
-        return ['left' => __('left'),'right' => __('right')];
+        return [
+            'left' => __('left'),
+            'right' => __('right')
+        ];
     }
 }
-

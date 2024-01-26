@@ -1,31 +1,35 @@
 <?xml version="1.0" ?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
-	<system>
-		<tab id="swirth" translate="label" sortOrder="999">
-			<label>swirth</label>
-		</tab>
-		<section id="scrolltotop" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-			<label>ScrollToTop</label>
-			<tab>swirth</tab>
-			<resource>Swirth_ScrollToTop::config_swirth_scrolltotop</resource>
-			<group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-				<label>General</label>
-				<field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-					<label>Enabled</label>
-					<comment/>
-					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-				</field>
-				<field id="position" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-					<label>Position</label>
-					<comment/>
-					<source_model>Swirth\ScrollToTop\Model\Config\Source\Position</source_model>
-				</field>
-				<field id="style" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-					<label>Style</label>
-					<comment/>
-					<source_model>Swirth\ScrollToTop\Model\Config\Source\Style</source_model>
-				</field>
-			</group>
-		</section>
-	</system>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="swirth" translate="label" sortOrder="999">
+            <label>swirth</label>
+        </tab>
+        <section id="scrolltotop" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>ScrollToTop</label>
+            <tab>swirth</tab>
+            <resource>Swirth_ScrollToTop::config_swirth_scrolltotop</resource>
+            <group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>General</label>
+                <field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Enabled</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="position" type="select" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Position</label>
+                    <comment/>
+                    <source_model>Swirth\ScrollToTop\Model\Config\Source\Position</source_model>
+                </field>
+                <field id="style" type="select" sortOrder="30" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Style</label>
+                    <comment/>
+                    <source_model>Swirth\ScrollToTop\Model\Config\Source\Style</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
 </config>
